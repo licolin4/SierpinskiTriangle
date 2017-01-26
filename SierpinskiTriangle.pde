@@ -4,11 +4,17 @@ public void setup()
 }
 public void draw()
 {	
+	background(0);
 	sierpinski(100,350,300);
 }
 public void mouseDragged()//optional
 {
-
+ if(mousePressed == true)
+ {
+ 	sierpinski(0,100,100);
+ 	sierpinski(400,100,100);
+ 	sierpinski(200,500,100);
+ }
 }
 public void sierpinski(int x, int y, int len) 
 {
@@ -21,6 +27,5 @@ public void sierpinski(int x, int y, int len)
 		sierpinski(x,y,len/2);
 		sierpinski(x+len/2,y,len/2);
 		sierpinski(x+len/4,y-len/2,len/2);
-		sierpinski(x+len/16,y-len/2,len/2);
 	}
 }
